@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainStoryBoard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oeU-FR-SA7">
+                                <rect key="frame" x="41" y="452" width="320" height="34"/>
+                                <accessibility key="accessibilityConfiguration" hint="input"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="webSearch"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2mC-WB-f3Y">
+                                <rect key="frame" x="41" y="522" width="327" height="283"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFt-Wo-JWb">
+                                <rect key="frame" x="57" y="387" width="52" height="30"/>
+                                <state key="normal" title="Portrait"/>
+                                <connections>
+                                    <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bYP-cm-6cG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ff7-Cd-kOc">
+                                <rect key="frame" x="276" y="387" width="75" height="30"/>
+                                <state key="normal" title="Landscape"/>
+                                <connections>
+                                    <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nHc-Ok-TIA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybz-RJ-ThY">
+                                <rect key="frame" x="70" y="87" width="61" height="30"/>
+                                <state key="normal" title="webview"/>
+                                <connections>
+                                    <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UCN-Wz-ddj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKv-zU-C97">
+                                <rect key="frame" x="50" y="140" width="101" height="30"/>
+                                <state key="normal" title="File DownLoad"/>
+                                <connections>
+                                    <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVm-bt-Mod"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QzS-qn-Xhm">
+                                <rect key="frame" x="78" y="202" width="30" height="30"/>
+                                <state key="normal" title="Msg"/>
+                                <connections>
+                                    <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DTd-HX-55a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GFt-Wo-JWb" firstAttribute="baseline" secondItem="ff7-Cd-kOc" secondAttribute="baseline" id="4hD-JQ-N0Q"/>
+                            <constraint firstItem="yKv-zU-C97" firstAttribute="centerX" secondItem="Ybz-RJ-ThY" secondAttribute="centerX" id="DC3-ML-GsF"/>
+                            <constraint firstItem="QzS-qn-Xhm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="H2b-XN-7de"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2mC-WB-f3Y" secondAttribute="bottom" constant="57" id="Lwx-KB-B9p"/>
+                            <constraint firstItem="QzS-qn-Xhm" firstAttribute="top" secondItem="yKv-zU-C97" secondAttribute="bottom" constant="32" id="NPx-1c-ukk"/>
+                            <constraint firstItem="yKv-zU-C97" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="PUF-bU-fhH"/>
+                            <constraint firstItem="GFt-Wo-JWb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="ToK-pr-s9B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oeU-FR-SA7" secondAttribute="trailing" constant="53" id="Us0-vw-8WA"/>
+                            <constraint firstItem="oeU-FR-SA7" firstAttribute="top" secondItem="GFt-Wo-JWb" secondAttribute="bottom" constant="35" id="V3G-Aw-YW8"/>
+                            <constraint firstItem="Ybz-RJ-ThY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="dey-YT-PWm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2mC-WB-f3Y" secondAttribute="trailing" constant="46" id="f1s-O8-UT0"/>
+                            <constraint firstItem="ff7-Cd-kOc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="343" id="fZO-pT-e9E"/>
+                            <constraint firstItem="Ybz-RJ-ThY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="faW-kX-1hT"/>
+                            <constraint firstItem="yKv-zU-C97" firstAttribute="top" secondItem="Ybz-RJ-ThY" secondAttribute="bottom" constant="23" id="gi8-Ne-VqI"/>
+                            <constraint firstItem="2mC-WB-f3Y" firstAttribute="leading" secondItem="oeU-FR-SA7" secondAttribute="leading" id="ie6-NK-jxn"/>
+                            <constraint firstItem="oeU-FR-SA7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="sob-fb-YZ3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ff7-Cd-kOc" secondAttribute="trailing" constant="63" id="uMM-lg-ch4"/>
+                            <constraint firstItem="2mC-WB-f3Y" firstAttribute="top" secondItem="oeU-FR-SA7" secondAttribute="bottom" constant="36" id="zKG-6W-LIR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btWebView" destination="Ybz-RJ-ThY" id="utg-Ox-QeN"/>
+                        <outlet property="btnMsg" destination="QzS-qn-Xhm" id="rDl-0k-QwH"/>
+                        <outlet property="button1" destination="GFt-Wo-JWb" id="JB5-mJ-mhr"/>
+                        <outlet property="button2" destination="ff7-Cd-kOc" id="BZt-Os-lKu"/>
+                        <outlet property="buttonFile" destination="yKv-zU-C97" id="Cdz-q2-yoA"/>
+                        <outlet property="edit" destination="oeU-FR-SA7" id="adn-3T-dtK"/>
+                        <outlet property="textview" destination="2mC-WB-f3Y" id="gcU-p0-aT3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-481.15942028985512" y="112.5"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="qZU-0i-Y3q">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="HB8-Ir-hPe" customClass="WebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S2i-Ya-gTq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cz7-W1-Yc2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="785"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Cn-L9-B9w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cz7-W1-Yc2" firstAttribute="top" secondItem="0Cn-L9-B9w" secondAttribute="top" id="0lM-l8-9ib"/>
+                            <constraint firstItem="Cz7-W1-Yc2" firstAttribute="leading" secondItem="0Cn-L9-B9w" secondAttribute="leading" id="WgO-6i-8h9"/>
+                            <constraint firstItem="Cz7-W1-Yc2" firstAttribute="centerX" secondItem="S2i-Ya-gTq" secondAttribute="centerX" id="kSP-Rn-PKm"/>
+                            <constraint firstItem="0Cn-L9-B9w" firstAttribute="bottom" secondItem="Cz7-W1-Yc2" secondAttribute="bottom" constant="33" id="syG-d1-UZL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="Cz7-W1-Yc2" id="XA7-Pn-KcM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjY-5J-SwH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321.73913043478262" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
