@@ -23,23 +23,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    self.edit.keyboardType = UIKeyboardTypeWebSearch ;
-
+    //    self.edit.keyboardType = UIKeyboardTypeWebSearch ;
+    
     self.edit.keyboardType = UIKeyboardTypeDefault;
-
+    
     UIToolbar* toolbar = [UIToolbar new];
     [toolbar sizeToFit];
     toolbar.frame = CGRectMake(0, 410, 320, 50);
-
+    
     UIBarButtonItem* item1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
-     UIBarButtonItem* item2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:nil];
+    UIBarButtonItem* item2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:nil];
     UIBarButtonItem* item3 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneClicked:)];
-
+    
     [toolbar setItems:[NSArray arrayWithObjects:item1, item2, item3, nil]];
     
-//    self.edit.inputAccessoryView = toolbar;
+    //    self.edit.inputAccessoryView = toolbar;
     self.edit.inputAccessoryView = nil;
-
+    
     NSInteger code = [self checkBiometry];
     NSString *StrCode = [@(code) stringValue];
     self.edit.text = StrCode;
@@ -53,15 +53,15 @@
 -(IBAction)doneClicked:(id)sender
 {
     NSLog(@"Done Clicked !! ");
-//    [self.edit endEditing:YES];
+    //    [self.edit endEditing:YES];
     [self.view endEditing:YES];
     
     NSString* strText = self.edit.text;
-   
+    
     NSString* visibleText = self.textview.text;
     NSLog(@"strText : %@" ,strText);
     NSLog(@"visibleText : %@", visibleText);
-  //  self.textview.text = visibleText +" "+ strText;
+    //  self.textview.text = visibleText +" "+ strText;
     
     self.textview.text = [NSString stringWithFormat:@"%@ %@", strText, visibleText];
 }
@@ -88,39 +88,42 @@
         [self presentViewController:view animated:true completion:nil];
     }else if(sender == self.buttonFile)
     {
-//        [self fileDownLoad:@"https://esop.ksfc.co.kr/resource/img/main/main_visual01.jpg"];
         [self fileDownLoad:@"https://www.navercorp.com/img/ko/naver/img_spot_summary.jpg"];
         
     }else if(sender == self.btnMsg)
     {
         [self alertMsg:@"hello world"];
+    }else if(sender == self.btnCall)
+    {
+        NSString* strUrl = @"tel:01012345678"; 
+        [self callEvent:strUrl];
     }
 }
 
 
 - (void)alertMsg:(NSString*)alertMsg
 {
-       //     if(@available(iOS 11, *)){
-        //    //        NSLog(@"@@ 11이상");
-        //    //    }else{
+    //     if(@available(iOS 11, *)){
+    //    //        NSLog(@"@@ 11이상");
+    //    //    }else{
     //                  NSLog(@"@@ 11미만");
-                    UIAlertController * alert=   [UIAlertController alertControllerWithTitle:@"* 알림 *"
-                                                                                     message:alertMsg
-                                                                              preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController * alert=   [UIAlertController alertControllerWithTitle:@"* 알림 *"
+                                                                     message:alertMsg
+                                                              preferredStyle:UIAlertControllerStyleAlert];
     
-                    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"확인"
-                                                                 style:UIAlertActionStyleDefault
-                                                               handler:^(UIAlertAction * action)
-                                         {
-                        [alert dismissViewControllerAnimated:YES completion:nil];
-                    }];
+    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"확인"
+                                                 style:UIAlertActionStyleDefault
+                                               handler:^(UIAlertAction * action)
+                         {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    }];
     
-                    [alert addAction:ok];
+    [alert addAction:ok];
     
-   
+    
     
     [self presentViewController:alert animated:YES completion:nil];
-                 //}
+    //}
 }
 
 - (NSInteger) checkBiometry
@@ -203,6 +206,22 @@
     }];
     
     [downloadTask resume];
+}
+
+-(void)callEvent:(NSString*)url{
+    NSLog(@"@@ callEvent url : %@", url);
+    
+    if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]]){
+        if ( @available(iOS 10.0, *) ) {
+            NSLog(@"@@ callEvent iOS 10 upper url : %@", url);
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url] options:nil completionHandler:nil];
+        }else{
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        }
+    }else{
+        NSLog(@"@@ callEvent is not canOpen url : %@", url);
+    }
+    
 }
 
 @end

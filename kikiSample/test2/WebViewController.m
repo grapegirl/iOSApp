@@ -39,7 +39,7 @@
     [self.view addSubview:self.webview];
     
     
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://esopdev.ksfc.co.kr/product/clipreport/test.jsp"]];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://naver.com"]];
     [self.webview loadRequest:request];
 
  

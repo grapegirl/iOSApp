@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btWebView;
 @property (weak, nonatomic) IBOutlet UIButton *buttonFile;
 @property (weak, nonatomic) IBOutlet UIButton *btnMsg;
+@property (weak, nonatomic) IBOutlet UIButton *btnCall;
 
 - (IBAction)click:(id)sender;
 
